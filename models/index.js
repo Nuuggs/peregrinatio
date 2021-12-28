@@ -1,4 +1,4 @@
-const sequeliezePackage = require('sequelze');
+const sequeliezePackage = require('sequelize');
 const allConfig = require('../config/config');
 
 const userModel = require('./userModel');
@@ -10,10 +10,10 @@ const config = allConfig[env];
 const db = {};
 console.log(env);
 
-const sequelze = new Sequelize(config.database, config.username, config.password, config);
+const sequelize = new Sequelize(config.database, config.username, config.password, config);
 
 db.User = userModel(sequelize, Sequelize.DataTypes);
-db.Game = taskModel(sequelieze, Sequelize.DataTypes);
+db.Game = gameModel(sequelize, Sequelize.DataTypes);
 
 db.User.hasMany(db.Game);
 db.Game.belongsTo(db.User);
