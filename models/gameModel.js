@@ -1,16 +1,16 @@
 const gameModel = (sequelize, DataTypes) => {
-  return sequelize.define('users', {
+  return sequelize.define('games', {
     id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
         type: DataTypes.INTEGER,
       },
-      game_state: {
+      gameState: {
         allowNull: false,
         type: DataTypes.JSON,
       },
-      user_id: {
+      userId: {
         allowNull: false,
         type: DataTypes.INTEGER,
         references: {
@@ -18,11 +18,11 @@ const gameModel = (sequelize, DataTypes) => {
           key: 'id',
         },
       },
-      created_at: {
+      createdAt: {
         allowNull: false,
         type: DataTypes.DATE,
       },
-      updated_at: {
+      updatedAt: {
         allowNull: false,
         type: DataTypes.DATE,
       },

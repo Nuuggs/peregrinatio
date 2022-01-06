@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="styles.css" rel="stylesheet">
+  <title>Peregrinatio</title>
+</head>
+<body>
+  <div id="banner">
+    <img id="banner-img" src="assets/journey.jpg">
+  </div>
+  <div id="interface">
+    <div id="login">
+      <h2>Welcome!</h2>
+      <div id="user-div">
+        <label for="user">Username:</label><br>
+        <input type="text" id="user" required>
+      </div>
+      <br>
+      <div id="email-div">
+        <label for="email">E-mail (for registration only):</label><br>
+        <input type="text" id="email">
+      </div>
+      <br>
+      <div id="password-div">
+        <label for="password">Password:</label><br>
+        <input type="password" id="password" required>
+      </div>
+      <br>
+      <div id="submit">
+        <button type="submit" id="login-btn">Log In</button>
+        <button type="submit" id="register-btn">Register</button>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script type="text/javascript" src="script.js"></script>
+</body>
+</html>
